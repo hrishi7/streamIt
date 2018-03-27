@@ -1,0 +1,21 @@
+
+
+        <div class="row" >
+          <div class="col-md-2" id="adults">
+            <h3 class="text-center">Are you Adult?</h3>
+            <select class="form-control" id="adult">
+              <option value="">Select option</option>
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+        </div>
+
+
+        /*  <li class="list-group-item"><strong>production Companies:</strong> ${
+            !movie.production_companies[0].name?:movie.production_companies[0].name
+          }</li>
+
+
+          <li class="list-group-item"><strong>production Country:</strong> ${movie.production_countries[0].name}</li>
+let title = encodeURIComponent(movie.original_name).replace(/%20/g, "-");
