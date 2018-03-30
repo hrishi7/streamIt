@@ -32,7 +32,7 @@ function getMovies(searchText){
 
         `:`
         <a class="portfolio-link" data-toggle="modal" href="#" onclick="movieSelected('${movie.id}')">
-            <img class="img-fluid" src="http://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}">
+            <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}">
           </a>
           `
       }

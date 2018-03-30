@@ -28,7 +28,7 @@ function getMovie(){
 
         `:`
           <div class="col-md-4">
-            <img class="img-fluid" src="http://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}">
+            <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}">
           </div>
           `
       }
@@ -85,7 +85,7 @@ function getMovie(){
             `
           }
           <hr>
-            <a href ="http://imdb.com/title/${movie.imdb_id}" target ="_blank" class="btn btn-primary">View Imdb</a>
+            <a href ="https://imdb.com/title/${movie.imdb_id}" target ="_blank" class="btn btn-primary">View Imdb</a>
             <a href="movies.html" clas="btn btn-default">Go back to search</a>
         </div>
       </div>

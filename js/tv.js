@@ -29,7 +29,7 @@ function getMovie(){
 
         `:`
           <div class="col-md-4">
-            <img class="img-fluid" src="http://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}">
+            <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}">
           </div>
           `
       }

@@ -10,7 +10,7 @@ $( document ).ready(function() {
       output += `
       <div class="col-md-4 col-sm-6 portfolio-item">
         <a class="portfolio-link" data-toggle="modal" href="#" onclick="movieSelected('${movie.id}')">
-          <img class="img-fluid" src="http://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}">
+          <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}">
         </a>
         <div class="portfolio-caption">
           <h4>${movie.title}</h4>
