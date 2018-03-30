@@ -92,7 +92,7 @@ function getMovie(){
       <br>
       <div class="row">
         <div class="conatiner embed-responsive embed-responsive-4by3">
-        <iframe src="https://videospider.in/getvideo?key=Gbk0l1UNDHK7Uz9S&video_id=${movie.imdb_id}" class="embed-responsive-item"></iframe>
+        <iframe src="https://videospider.in/getvideo?key=Gbk0l1UNDHK7Uz9S&video_id=${movie.imdb_id}" style=" width: 100%; height: 100%" allowfullscreen="true" scrolling="no" class="embed-responsive-item"></iframe>
         </div>
       </div>
 
