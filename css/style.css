@@ -732,7 +732,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 
 #searchText{
-  width: 500px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   height: 55px;
