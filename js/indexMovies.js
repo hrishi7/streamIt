@@ -32,7 +32,7 @@ $( document ).ready(function() {
 window.onscroll = function(){scrollFunction()}
 function scrollFunction(){
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10){
-    document.getElementById('mainNav').style.backgroundColor = '#2A2A2C';
+    document.getElementById('mainNav').style.backgroundColor = '#323033';
   }else{
     document.getElementById('mainNav').style.backgroundColor = 'transparent';
   }

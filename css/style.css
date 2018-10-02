@@ -103,7 +103,13 @@ img::-moz-selection {
 #mainNav {
   background-color: #6F3D8C;
 }
-
+@media only screen and (max-width:990px){
+  #mainNav {
+    background-color: #323033;
+    position: fixed;
+    margin-bottom:5px ;
+  }
+}
 #mainNav .navbar-toggler {
   font-size: 12px;
   right: 0;
