@@ -1,5 +1,4 @@
 
-
 $( document ).ready(function() {
   axios.get('https://api.themoviedb.org/3/discover/movie?api_key=ca5d667528ca51e527d9e4f7830d97d2&language=en-US&sort_by=popularity.desc&include_adult=false')
   .then((response) =>{
@@ -27,3 +26,14 @@ $( document ).ready(function() {
     console.log(err);
   });
 });
+
+
+//function to display navbar background-color on scroll 
+window.onscroll = function(){scrollFunction()}
+function scrollFunction(){
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10){
+    document.getElementById('mainNav').style.backgroundColor = '#2A2A2C';
+  }else{
+    document.getElementById('mainNav').style.backgroundColor = 'transparent';
+  }
+}
