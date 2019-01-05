@@ -6,7 +6,7 @@ StreamIt is a modern web application that allows you to search, view and stream 
 
 ### Home Page
 
-<img align="right" width="300" src="img/readme_assets/home.png" alt="landing page" />
+<img align="right" width="300" src="https://s3.ap-south-1.amazonaws.com/streamitmovies/landing.png" alt="landing page" />
 
 ### The latest movies
 
