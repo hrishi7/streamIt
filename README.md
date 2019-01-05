@@ -10,11 +10,11 @@ StreamIt is a modern web application that allows you to search, view and stream 
 
 ### The latest movies
 
-<img align="right" width="300" src="img/readme_assets/results.png" alt="latest movies" />
+<img align="right" width="300" src="https://s3.ap-south-1.amazonaws.com/streamitmovies/latest.png" alt="latest movies" />
 
 ### The Results of a Movie Search
 
-<img align="right" width="300" src="img/readme_assets/search.png" alt="movie search" />
+<img align="right" width="300" src="https://s3.ap-south-1.amazonaws.com/streamitmovies/search.png" alt="movie search" />
 
 ##Bugs
 A list of reported bugs can be found [here](https://github.com/hrishi7/streamIt/issues). If your bug has yet to be reported, feel free to open a [new issue here](https://github.com/hrishi7/streamIt/issues/new).
