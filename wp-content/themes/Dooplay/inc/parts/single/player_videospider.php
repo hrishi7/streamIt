@@ -69,18 +69,18 @@ $gdrivepage = get_option('dt_jwplayer_page_gdrive');
 		<nav class="player">
 			<ul class="options">
 				<li>
-					<a class="sources"><i class="icon-menu listsormenu"></i> <b><?php _d('Options'); ?></b></a>
+					<a class="sources"><em class="icon-menu listsormenu"></em> <strong><?php _d('Options'); ?></strong></a>
 						<ul class="idTabs sourceslist">
 							<li>
 								<a class="options selected" href="#option-videospider">
-									<b class="icon-play_arrow"></b> openload 
-									<span class="dt_flag"><img src="<?php echo DT_DIR_URI, '/assets/img/flags/','en','.png'; ?>"></span>	
+									<strong class="icon-play_arrow"></strong> openload 
+									<span class="dt_flag"><img alt="" src="<?php echo DT_DIR_URI, '/assets/img/flags/','en','.png'; ?>"></span>	
 								</a>
 							</li>
 						<?php $numerado = 1; { foreach ( $dt_player as $field ) { ?>
 							<li><a class="options" href="#option-<?php echo $numerado; ?>">
-							<b class="icon-play_arrow"></b> <?php echo $field['name']; ?> 
-							<?php if($field['idioma']) { ?><span class="dt_flag"><img src="<?php echo DT_DIR_URI, '/assets/img/flags/',$field['idioma'],'.png'; ?>"></span><?php } ?>
+							<strong class="icon-play_arrow"></strong> <?php echo $field['name']; ?> 
+							<?php if($field['idioma']) { ?><span class="dt_flag"><img alt="" src="<?php echo DT_DIR_URI, '/assets/img/flags/',$field['idioma'],'.png'; ?>"></span><?php } ?>
 							</a></li>
 						<?php $numerado++; } } ?> 
 						</ul>
@@ -93,11 +93,11 @@ $gdrivepage = get_option('dt_jwplayer_page_gdrive');
 		<?php if ($viewsc =='true') : if($views) { echo '<span class="views"><strong>'. comvert_number($views) .'</strong> '. __d('Views') .'</span>'; } endif; ?>
 		<nav class="controles">
 			<ul class="list">
-				<?php  if ($ads =='true') : ?><li id="count" class="contadorads"><?php _d('Ad'); ?> <i id="contador"><?php echo $time; ?></i></li><?php endif; ?>
-				<?php  if ($light =='true') : ?><li><a class="lightSwitcher" href="javascript:void(0);"><i class="icon-wb_sunny"></i></a></li><?php endif; ?>
-				<?php  if ($report =='true') : if($reports=='10') { /* none*/ } else { ?><li><a class="report-video"><i class="icon-notification"></i> <span><?php _d('report'); ?></span></a></li><?php } endif; ?>
+				<?php  if ($ads =='true') : ?><li id="count" class="contadorads"><?php _d('Ad'); ?> <em id="contador"><?php echo $time; ?></em></li><?php endif; ?>
+				<?php  if ($light =='true') : ?><li><a class="lightSwitcher" href="javascript:void(0);"><em class="icon-wb_sunny"></em></a></li><?php endif; ?>
+				<?php  if ($report =='true') : if($reports=='10') { /* none*/ } else { ?><li><a class="report-video"><em class="icon-notification"></em><span><?php _d('report'); ?></span></a></li><?php } endif; ?>
 				<li><a class="wide <?php if(get_cookie('dt_player_width') == 'full') { echo 'recox'; } else { echo 'reco'; } ?>">
-					<i class="icons-enlarge2 <?php if(get_cookie('dt_player_width') == 'full') { echo 'icons-shrink2'; } ?>"></i>
+					<em class="icons-enlarge2 <?php if(get_cookie('dt_player_width') == 'full') { echo 'icons-shrink2'; } ?>"></em>
 				</a></li>
 			</ul>
 		</nav>
@@ -109,9 +109,9 @@ $gdrivepage = get_option('dt_jwplayer_page_gdrive');
 	$(".lightSwitcher").click(function(){
 	$("#oscuridad").toggle();
 	if ($("#oscuridad").is(":hidden"))
-	$(this).html("<i class='icon-wb_sunny'></i>").removeClass("turnedOff");
+	$(this).html("<em class='icon-wb_sunny'><em class").removeClass("turnedOff");
 		else
-	$(this).html("<i class='icon-wb_sunny'></i>").addClass("turnedOff");
+	$(this).html("<em class='icon-wb_sunny'><em class").addClass("turnedOff");
 		});
 <?php  if ($ads =='true') : ?>
 	var segundos = <?php echo $time; ?>; 
