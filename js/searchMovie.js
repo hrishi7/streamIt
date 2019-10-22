@@ -47,7 +47,7 @@ function getMovies(searchText) {
         }
         <div class="portfolio-caption">
           <h4 style="color:black">${movie.title}</h4>
-          Released On<p class="text-muted">${movie.release_date}</p>
+          <p class="text-muted">Released On<br/>${movie.release_date}</p>
         <a onclick="movieSelected('${
           movie.id
         }')" class="btn btn-primary" href="#">Movie Details</a>
