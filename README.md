@@ -1,4 +1,4 @@
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 # StreamIt
 
@@ -14,7 +14,7 @@ StreamIt is a modern web application that allows you to search, view and stream 
 
 ### The Results of a Movie Search
 
-![Search Result](img/searchMovies.png)
+![Search Result](img/searchMovie.png)
 
 ##Bugs
 A list of reported bugs can be found [here](https://github.com/hrishi7/streamIt/issues). If your bug has yet to be reported, feel free to open a [new issue here](https://github.com/hrishi7/streamIt/issues/new).
