@@ -105,7 +105,7 @@ img::-moz-selection {
 }
 @media only screen and (max-width:990px){
   #mainNav {
-    background-color: #323033;
+    background-color: #323643;
     position: fixed;
     margin-bottom:5px ;
   }
@@ -117,7 +117,7 @@ img::-moz-selection {
   text-transform: uppercase;
   color: white;
   border: 0;
-  background-color: #fed136;
+  background-color: #fed43e;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
