@@ -15,7 +15,7 @@ function getMovie() {
         movieId +
         "?api_key=ca5d667528ca51e527d9e4f7830d97d2&include_adult=false"
     )
-    .then(response => {
+    .then((response) => {
       console.log(response);
       let movie = response.data;
       let output = `
@@ -31,9 +31,7 @@ function getMovie() {
         `
             : `
           <div class="col-md-4">
-            <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/${
-              movie.poster_path
-            }" alt="${movie.title}">
+            <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}">
           </div>
           `
         }
@@ -46,9 +44,7 @@ function getMovie() {
                 <li class="list-group-item"><strong>Released On:</strong>${notAvailable}</li>
                 `
                   : `
-              <li class="list-group-item"><strong>Released On:</strong> ${
-                movie.release_date
-              }</li>
+              <li class="list-group-item"><strong>Released On:</strong> ${movie.release_date}</li>
               `
               }
             ${
@@ -57,9 +53,7 @@ function getMovie() {
               <li class="list-group-item"><strong>Rated:</strong>${notAvailable}</li>
               `
                 : `
-            <li class="list-group-item"><strong>Rated:</strong> ${
-              movie.vote_average
-            }</li>
+            <li class="list-group-item"><strong>Rated:</strong> ${movie.vote_average}</li>
             `
             }
           ${
@@ -68,9 +62,7 @@ function getMovie() {
             <li class="list-group-item"><strong>Tagline:</strong>${notAvailable}</li>
             `
               : `
-          <li class="list-group-item"><strong>Tagline:</strong> ${
-            movie.tagline
-          }</li>
+          <li class="list-group-item"><strong>Tagline:</strong> ${movie.tagline}</li>
           `
           }
         ${
@@ -79,9 +71,7 @@ function getMovie() {
           <li class="list-group-item"><strong>production Companies:</strong>${notAvailable}</li>
           `
             : `
-        <li class="list-group-item"><strong>production Companies:</strong> ${
-          movie.production_companies[0].name
-        }</li>
+        <li class="list-group-item"><strong>production Companies:</strong> ${movie.production_companies[0].name}</li>
         `
         }
       ${
@@ -90,9 +80,7 @@ function getMovie() {
         <li class="list-group-item"><strong>production Country:</strong>${notAvailable}</li>
         `
           : `
-      <li class="list-group-item"><strong>production Country:</strong> ${
-        movie.production_countries[0].name
-      }</li>
+      <li class="list-group-item"><strong>production Country:</strong> ${movie.production_countries[0].name}</li>
       `
       }
 
@@ -131,7 +119,20 @@ function getMovie() {
     `;
       $("#movie").html(output);
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
     });
+}
+
+//function to display navbar background-color on scroll
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    document.getElementById("mainNav").style.backgroundColor = "#323033";
+  } else {
+    document.getElementById("mainNav").style.backgroundColor = "transparent";
+  }
 }
