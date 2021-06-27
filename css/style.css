@@ -581,25 +581,48 @@ header.masthead .intro-text .intro-heading {
 }
 
 .team-member {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  margin-top: -80px;
   text-align: center;
 }
 
 .team-member img {
   width: 225px;
   height: 225px;
-  border: 7px solid #fff;
+  border: 7px solid blue;
 }
 
-.team-member h4 {
+<!--Changes made by Opeyemi-- > 
+
+#text-muted h2{
+  font-size: 12px;
+  text-align: justify;
+  margin: auto;
+}
+.profile-name {
+  color: blue;
+  font-size: 35px;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+}
+.emaill,
+.contact {
+  display: flex;
+  justify-content: left;
+}
+.emaill{
+  margin-bottom: -12px;
+}
+<!--Changes stopped-->
+
+/* .team-member h4 {
   margin-top: 25px;
   margin-bottom: 0;
   text-transform: none;
-}
-
-.team-member p {
-  margin-top: 0;
-}
+} */
 
 section#contact {
   background-color: #212529;
@@ -607,71 +630,58 @@ section#contact {
   background-repeat: no-repeat;
   background-position: center;
 }
-
 section#contact .section-heading {
   color: #fff;
 }
-
 section#contact .form-group {
   margin-bottom: 25px;
 }
-
 section#contact .form-group input,
 section#contact .form-group textarea {
   padding: 20px;
 }
-
 section#contact .form-group input.form-control {
   height: auto;
 }
-
 section#contact .form-group textarea.form-control {
   height: 248px;
 }
-
 section#contact .form-control:focus {
   border-color: #fed136;
   box-shadow: none;
 }
-
 section#contact ::-webkit-input-placeholder {
   font-weight: 700;
   color: #ced4da;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
 section#contact :-moz-placeholder {
   font-weight: 700;
   color: #ced4da;
   /* Firefox 18- */
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
 section#contact ::-moz-placeholder {
   font-weight: 700;
   color: #ced4da;
   /* Firefox 19+ */
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
 section#contact :-ms-input-placeholder {
   font-weight: 700;
   color: #ced4da;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
 footer {
   padding: 25px 0;
   text-align: center;
 }
-
 footer span.copyright {
   font-size: 90%;
   line-height: 40px;
   text-transform: none;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
 footer ul.quicklinks {
   font-size: 90%;
   line-height: 40px;
@@ -679,11 +689,9 @@ footer ul.quicklinks {
   text-transform: none;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
 ul.social-buttons {
   margin-bottom: 0;
 }
-
 ul.social-buttons li a {
   font-size: 20px;
   line-height: 40px;
@@ -698,17 +706,14 @@ ul.social-buttons li a {
   outline: none;
   background-color: #212529;
 }
-
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
   background-color: #fed136;
 }
-
 #searchMovieIndex{
   width: 325px;
   margin-left: 35%;
   margin-right: 35%;
 }
-
 #movie-poster{
   width: 500px;
   height: 600px;
@@ -716,35 +721,26 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 #movie-div{
   width: 800px;
-
 }
 #movie-details{
   width: 300px;
   float: right;
 }
-
-
-
 #movies img, #movie img{
   width: 100%;
 }
-
-
   #movies .col-md-3 .well{
     height: 500px;
   }
   #movies .col-md-3 img{
     height: 240px;
   }
-
-
 #searchText{
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   height: 55px;
 }
-
 #adults, #year, #genres {
   margin-top: 15px;
   margin-left: auto;
