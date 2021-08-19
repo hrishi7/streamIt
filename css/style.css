@@ -141,7 +141,10 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #fed136;
+  
+  background-color: #fec503;
+  transition: .6s ease-in;
+
 }
 
 @media (min-width: 992px) {
@@ -744,6 +747,10 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   margin-right: auto;
   height: 55px;
 }
+ #searchText:focus{
+         box-shadow: 4px 4px 4px  rgba(2, 255, 255,1);
+         border: 2px solid  rgba(2, 255, 255,1);
+     }
 
 #adults, #year, #genres {
   margin-top: 15px;
