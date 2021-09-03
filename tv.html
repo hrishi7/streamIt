@@ -1,6 +1,6 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,70 +12,73 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
   <!--rel="stylesheet"<link href="https://bootswatch.com/4/darkly/bootstrap.min.css"/>-->
 
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/formatDate.js"></script>
   <script src="js/searchTv.js"></script>
   <script src="js/tv.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </head>
-  <body id="page-top">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">StreamIt</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="movies.html">Movies</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="tv.html">Tv Shows</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="contact.html">Contact Us</a>
-            </li>
-          </ul>
-        </div>
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">StreamIt</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="movies.html">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="tv.html">Tv Shows</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
 
   <section class="bg-light" id="portfolio">
     <div class="container">
-        <div class="row" style="padding-top: 100px;">
-          <div class=" col-md-12 jumbotron  bg-dark">
-            <h3 class="text-center" style="color:white; padding-bottom: 20px;">Search for any Show</h3>
-            <form id="searchForm">
-              <input type="text" class="form-control" id="searchText" placeholder="Search Tv Shows by Name and Press Enter">
-              <input type="submit"
-                     class="btn btn-success"
-                     style="margin-top: 20px;"
-                     value="Search"
-                     name="search" />
-            </form>
-          </div>
+      <div class="row" style="padding-top: 100px;">
+        <div class=" col-md-12 jumbotron  bg-dark">
+          <h3 class="text-center" style="color:white; padding-bottom: 20px;">Search for any Show</h3>
+          <form id="searchForm">
+            <input type="text" class="form-control" id="searchText"
+              placeholder="Search Tv Shows by Name and Press Enter">
+            <input type="submit" class="btn btn-success" style="margin-top: 20px;" value="Search" name="search" />
+          </form>
         </div>
-        <div id="movies" class="row">
+      </div>
+      <div id="movies" class="row">
 
-        </div>
+      </div>
     </div>
 
   </section>
@@ -113,5 +116,6 @@
 
   <!-- Plugin JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-  </body>
+</body>
+
 </html>
