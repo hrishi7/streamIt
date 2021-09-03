@@ -47,7 +47,7 @@ function getMovie() {
                 `
                   : `
               <li class="list-group-item"><strong>Released On:</strong> ${
-                movie.release_date
+                formatDate(movie.release_date)
               }</li>
               `
               }
