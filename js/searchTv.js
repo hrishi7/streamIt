@@ -2,6 +2,11 @@
 
 
 $(document).ready(() => {
+
+  if ($('#searchText')[0] && $('#searchText').val().length) {
+    getMovies($('#searchText').val());
+  }
+
   $('#searchForm').on('submit', (e) => {
     let searchText = $('#searchText').val();
     getMovies(searchText);
