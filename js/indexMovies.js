@@ -1,11 +1,14 @@
 $(document).ready(function () {
   axios
     .get(
-      'https://api.themoviedb.org/3/discover/movie?api_key=ca5d667528ca51e527d9e4f7830d97d2&language=en-US&sort_by=popularity.desc&include_adult=false'
+    'https://api.themoviedb.org/3/discover/movie?api_key=ca5d667528ca51e527d9e4f7830d97d2&language=en-US&sort_by=popularity.desc&include_adult=false'
     )
     .then((response) => {
       let movies = response.data.results;
-      console.log(response);
+      let output = "";
+      $.each(movies, (index, movie) => {
+        output += `
+      <div class="col-md-2 col-sm-4 portfolio-item">
       let output = '';
       $.each(movies, (index, movie) => {
         output += `
@@ -22,6 +25,24 @@ $(document).ready(function () {
 
       `;
       });
+      $("#home-movies").html(output);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+//function to display navbar background-color on scroll
+window.onscroll = function () {
+  scrollFunction();
+};
+function scrollFunction() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    document.getElementById("mainNav").style.backgroundColor = "#323033";
+  } else {
+    document.getElementById("mainNav").style.backgroundColor = "transparent";
+  }
+}
       $('#home-movies').html(output);
 
       //function to display navbar background-color on scroll
