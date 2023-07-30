@@ -1,12 +1,17 @@
-
-$( document ).ready(function() {
-  axios.get('https://api.themoviedb.org/3/discover/movie?api_key=ca5d667528ca51e527d9e4f7830d97d2&language=en-US&sort_by=popularity.desc&include_adult=false')
-  .then((response) =>{
-    let movies = response.data.results;
-    console.log(response);
-    let output ='';
-    $.each(movies, (index, movie) =>{
-      output += `
+$(document).ready(function () {
+  axios
+    .get(
+    'https://api.themoviedb.org/3/discover/movie?api_key=ca5d667528ca51e527d9e4f7830d97d2&language=en-US&sort_by=popularity.desc&include_adult=false'
+    )
+    .then((response) => {
+      let movies = response.data.results;
+      let output = "";
+      $.each(movies, (index, movie) => {
+        output += `
+      <div class="col-md-2 col-sm-4 portfolio-item">
+      let output = '';
+      $.each(movies, (index, movie) => {
+        output += `
       <div class="col-md-4 col-sm-6 portfolio-item">
         <a class="portfolio-link" data-toggle="modal" href="#" onclick="movieSelected('${movie.id}')">
           <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}">
@@ -19,21 +24,48 @@ $( document ).ready(function() {
       </div>
 
       `;
+      });
+      $("#home-movies").html(output);
+    })
+    .catch((err) => {
+      console.log(err);
     });
-    $('#home-movies').html(output);
-  })
-  .catch((err) =>{
-    console.log(err);
-  });
 });
 
-
-//function to display navbar background-color on scroll 
-window.onscroll = function(){scrollFunction()}
-function scrollFunction(){
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10){
-    document.getElementById('mainNav').style.backgroundColor = '#323033';
-  }else{
-    document.getElementById('mainNav').style.backgroundColor = 'transparent';
+//function to display navbar background-color on scroll
+window.onscroll = function () {
+  scrollFunction();
+};
+function scrollFunction() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    document.getElementById("mainNav").style.backgroundColor = "#323033";
+  } else {
+    document.getElementById("mainNav").style.backgroundColor = "transparent";
   }
 }
+      $('#home-movies').html(output);
+
+      //function to display navbar background-color on scroll
+      $(window).scroll(function () {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          $('#mainNav').css({ 'background-color': '#323033' });
+          $('#gtp').css({ transform: 'scale(100%)' });
+        } else {
+          $('#mainNav').css({ 'background-color': 'transparent' });
+          $('#gtp').css({ transform: 'scale(0)' });
+        }
+      });
+
+      //function to scroll to the top when the user clicks the "goToTop" button
+      $('#gtp').click(function () {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});

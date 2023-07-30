@@ -1,10 +1,32 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0px;
   overflow-x: hidden;
-  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-#about-page-body{
+#gtp {
+  display: block;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  background-color: #fed136;
+  border: none;
+  z-index: 200;
+  transform: scale(0);
+  transition: all 0.3s ease-out;
+}
+
+#gtp:hover {
+  cursor: pointer;
+}
+
+#about-page-body {
   background-color: #d7dfed !important;
 }
 p {
@@ -22,6 +44,59 @@ a:hover {
   color: #fed136 !important;
 }
 
+
+
+/* CSS */
+.button-29 {
+
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
 h1,
 h2,
 h3,
@@ -29,7 +104,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 section {
@@ -48,7 +123,7 @@ section h3.section-subheading {
   font-style: italic;
   margin-bottom: 75px;
   text-transform: none;
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -58,7 +133,7 @@ section h3.section-subheading {
 }
 
 .btn {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -72,13 +147,16 @@ section h3.section-subheading {
   border-color: #fed136;
 }
 
-.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover {
   background-color: #fec810 !important;
   border-color: #fec810 !important;
   color: white;
 }
 
-.btn-primary:active, .btn-primary:focus {
+.btn-primary:active,
+.btn-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
 }
 
@@ -101,14 +179,14 @@ img::-moz-selection {
 }
 
 #mainNav {
-  background-color: #6F3D8C;
   position: relative;
+  background-color: #6f3d8c;
 }
-@media only screen and (max-width:990px){
+@media only screen and (max-width: 990px) {
   #mainNav {
     background-color: #323033;
     position: fixed;
-    margin-bottom:5px ;
+    margin-bottom: 5px;
   }
 }
 #mainNav .navbar-toggler {
@@ -119,15 +197,18 @@ img::-moz-selection {
   color: white;
   border: 0;
   background-color: #fed136;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #mainNav .navbar-brand {
   color: #fed136;
-  font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 
-#mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+#mainNav .navbar-brand.active,
+#mainNav .navbar-brand:active,
+#mainNav .navbar-brand:focus,
+#mainNav .navbar-brand:hover {
   color: #fec503;
 }
 
@@ -137,11 +218,13 @@ img::-moz-selection {
   padding: 0.75em 0;
   letter-spacing: 1px;
   color: white;
-  transition:.6s ease;
+  transition: 0.6s ease;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #fed136;
 }
 
@@ -178,7 +261,7 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("../img/header-bg.jpg");
+  background-image: url('../img/header-bg.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -198,7 +281,7 @@ header.masthead .intro-text .intro-lead-in {
   font-style: italic;
   line-height: 22px;
   margin-bottom: 25px;
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 header.masthead .intro-text .intro-heading {
@@ -206,7 +289,7 @@ header.masthead .intro-text .intro-heading {
   font-weight: 700;
   line-height: 50px;
   margin-bottom: 25px;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -219,14 +302,14 @@ header.masthead .intro-text .intro-heading {
     font-style: italic;
     line-height: 40px;
     margin-bottom: 25px;
-    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   header.masthead .intro-text .intro-heading {
     font-size: 75px;
     font-weight: 700;
     line-height: 75px;
     margin-bottom: 50px;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 }
 
@@ -263,7 +346,11 @@ header.masthead .intro-text .intro-heading {
   opacity: 1;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+#portfolio
+  .portfolio-item
+  .portfolio-link
+  .portfolio-hover
+  .portfolio-hover-content {
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -274,12 +361,27 @@ header.masthead .intro-text .intro-heading {
   color: white;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+#portfolio
+  .portfolio-item
+  .portfolio-link
+  .portfolio-hover
+  .portfolio-hover-content
+  i {
   margin-top: -12px;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+#portfolio
+  .portfolio-item
+  .portfolio-link
+  .portfolio-hover
+  .portfolio-hover-content
+  h3,
+#portfolio
+  .portfolio-item
+  .portfolio-link
+  .portfolio-hover
+  .portfolio-hover-content
+  h4 {
   margin: 0;
 }
 
@@ -294,13 +396,14 @@ header.masthead .intro-text .intro-heading {
 #portfolio .portfolio-item .portfolio-caption h4 {
   margin: 0;
   text-transform: none;
+  font-size: 1rem;
 }
 
 #portfolio .portfolio-item .portfolio-caption p {
   font-size: 16px;
   font-style: italic;
   margin: 0;
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #portfolio * {
@@ -340,7 +443,7 @@ header.masthead .intro-text .intro-heading {
   font-size: 16px;
   font-style: italic;
   margin: 20px 0 30px;
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .portfolio-modal .modal-content ul.list-inline {
@@ -408,7 +511,7 @@ header.masthead .intro-text .intro-heading {
   left: 40px;
   width: 2px;
   margin-left: -1.5px;
-  content: '';
+  content: "";
   background-color: #e9ecef;
 }
 
@@ -418,9 +521,10 @@ header.masthead .intro-text .intro-heading {
   margin-bottom: 50px;
 }
 
-.timeline > li:after, .timeline > li:before {
+.timeline > li:after,
+.timeline > li:before {
   display: table;
-  content: ' ';
+  content: " ";
 }
 
 .timeline > li:after {
@@ -604,7 +708,7 @@ header.masthead .intro-text .intro-heading {
 
 section#contact {
   background-color: #212529;
-  background-image: url("../img/map-image.png");
+  background-image: url('../img/map-image.png');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -638,27 +742,27 @@ section#contact .form-control:focus {
 section#contact ::-webkit-input-placeholder {
   font-weight: 700;
   color: #ced4da;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 section#contact :-moz-placeholder {
   font-weight: 700;
   color: #ced4da;
   /* Firefox 18- */
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 section#contact ::-moz-placeholder {
   font-weight: 700;
   color: #ced4da;
   /* Firefox 19+ */
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 section#contact :-ms-input-placeholder {
   font-weight: 700;
   color: #ced4da;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 footer {
@@ -670,7 +774,7 @@ footer span.copyright {
   font-size: 90%;
   line-height: 40px;
   text-transform: none;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 footer ul.quicklinks {
@@ -678,7 +782,7 @@ footer ul.quicklinks {
   line-height: 40px;
   margin-bottom: 0;
   text-transform: none;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 ul.social-buttons {
@@ -700,74 +804,76 @@ ul.social-buttons li a {
   background-color: #212529;
 }
 
-ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+ul.social-buttons li a:active,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:hover {
   background-color: #fed136;
 }
 
-#searchMovieIndex{
+#searchMovieIndex {
   width: 325px;
   margin-left: 35%;
   margin-right: 35%;
 }
 
-#movie-poster{
+#movie-poster {
+  width: 300px;
+  height: 350px;
   width: 500px;
   height: 600px;
   float: left;
 }
-#movie-div{
+#movie-div {
   width: 800px;
-
 }
-#movie-details{
+#movie-details {
   width: 300px;
   float: right;
 }
 
-
-
-#movies img, #movie img{
+#movies img,
+#movie img {
   width: 100%;
 }
 
+#movies .col-md-3 .well {
+  height: 500px;
+}
+#movies .col-md-3 img {
+  height: 240px;
+}
 
-  #movies .col-md-3 .well{
-    height: 500px;
-  }
-  #movies .col-md-3 img{
-    height: 240px;
-  }
-
-
-#searchText{
+#searchText {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   height: 55px;
 }
 
-#adults, #year, #genres {
+#adults,
+#year,
+#genres {
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   width: 250px;
 }
-#suggest-keyword{
+#suggest-keyword {
   float: left;
   display: block;
 }
- #filter-search{
-   overflow-x: hidden;
-   float: right;
-   margin-top: 15px;
-   width: 250px;
- }
-#Keyword{
+#filter-search {
+  overflow-x: hidden;
+  float: right;
+  margin-top: 15px;
+  width: 250px;
+}
+#Keyword {
   float: left;
   display: block;
   width: 200px;
 }
-#hide-button{
+#hide-button {
   margin-top: 40px;
 }
