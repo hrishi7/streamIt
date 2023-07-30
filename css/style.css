@@ -179,6 +179,7 @@ img::-moz-selection {
 }
 
 #mainNav {
+  position: relative;
   background-color: #6f3d8c;
 }
 @media only screen and (max-width: 990px) {
