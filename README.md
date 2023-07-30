@@ -29,5 +29,6 @@ Result of Movie Search
 ![Search Result](img/searchMovie.png)
 <br>
 
-##Bugs
+#### Bugs
 A list of reported bugs can be found [here](https://github.com/hrishi7/streamIt/issues). If your bug has yet to be reported, feel free to open a [new issue here](https://github.com/hrishi7/streamIt/issues/new).
+ 
