@@ -1,41 +1,72 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
   <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
     <title>StreamIt</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Custom fonts for this template -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="js/indexMovies.js"></script>
     <script type="text/javascript" src="js/movie.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   </head>
 
   <body id="page-top">
-
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="index.html">StreamIt</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           Menu
           <i class="fa fa-bars"></i>
         </button>
@@ -45,16 +76,22 @@
               <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="movies.html">Movies</a>
+              <a class="nav-link js-scroll-trigger" href="movies.html"
+                >Movies</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="tv.html">Tv Shows</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="about.html">About Us</a>
+              <a class="nav-link js-scroll-trigger" href="about.html"
+                >About Us</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="contact.html">Contact Us</a>
+              <a class="nav-link js-scroll-trigger" href="contact.html"
+                >Contact Us</a
+              >
             </li>
           </ul>
         </div>
@@ -66,12 +103,33 @@
       <div class="container">
         <div class="intro-text">
           <div class="intro-lead-in">Welcome To Our Website!</div>
-          <div class="intro-heading text-uppercase">Watch Movies and Tv Shows ad-free</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="movies.html">Search </a>
+          <div class="intro-heading text-uppercase">
+            Watch Movies and Tv Shows ad-free
+          </div>
+          <a
+            class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+            href="movies.html"
+            >Search
+          </a>
         </div>
       </div>
+      <button id="gtp">
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 0 24 24"
+            width="24px"
+            fill="#000000"
+          >
+            <path d="M0 0h24v24H0V0z" fill="none" />
+            <path
+              d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+            />
+          </svg>
+        </span>
+      </button>
     </header>
-
 
     <!-- Portfolio Grid -->
     <section class="bg-light" id="portfolio">
@@ -79,16 +137,14 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Latest Movies</h2>
-            <h3 class="section-subheading text-muted">Brand New with all Information and with  High Quality</h3>
+            <h3 class="section-subheading text-muted">
+              Brand New with all Information and with High Quality
+            </h3>
           </div>
         </div>
-        <div id="home-movies" class="row">
-
-        </div>
+        <div id="home-movies" class="row"></div>
       </div>
     </section>
-
-
 
     <!-- Team -->
     <section class="bg-light" id="team">
@@ -96,13 +152,19 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">About Me</h2>
-            <h3 class="section-subheading text-muted">I am a B.tech 2nd year CSE Student in MAKAUT.</h3>
+            <h3 class="section-subheading text-muted">
+              I am a B.tech 2nd year CSE Student in MAKAUT.
+            </h3>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 text-center">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="img/team/myImage.jpg" alt="my-image">
+              <img
+                class="mx-auto rounded-circle"
+                src="img/team/myImage.jpg"
+                alt="my-image"
+              />
               <h4>Hrishikesh baidya</h4>
               <p class="text-muted">Web Developer</p>
             </div>
@@ -110,14 +172,17 @@
         </div>
       </div>
     </section>
-
+    <button onclick="topFunction()" class="button-29" title="Go to top"><i style='font-size:24px' class='fas'>&#xf102;</i></button>
 
     <!-- Footer -->
     <footer>
       <div class="container">
         <div class="row">
           <div class="col-md-9">
-            <span class="copyright">Copyright &copy; StreamIt Developed By <b>Hrishikesh Baidya</b> in 2018</span>
+            <span class="copyright"
+              >Copyright &copy; StreamIt Developed By
+              <b>Hrishikesh Baidya</b> in 2018</span
+            >
           </div>
           <div class="col-md-3">
             <ul class="list-inline social-buttons">
@@ -133,6 +198,7 @@
                 </a>
               </li>
             </ul>
+            
           </div>
         </div>
       </div>
@@ -174,15 +240,11 @@
       </div>
     </div>-->
 
-
     <!-- Bootstrap core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-
   </body>
-
 </html>
