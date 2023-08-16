@@ -1,5 +1,6 @@
 let adultFlag = false;
 $(document).ready(() => {
+  getPopularMovies();
   $("#searchForm").on("submit", e => {
     let searchText = $("#searchText").val();
     //adultFlag = $('#adult').value();
@@ -8,7 +9,85 @@ $(document).ready(() => {
     e.preventDefault();
   });
 });
+function getPopularMovies() {
+  axios.get(
+      "https://api.themoviedb.org/3/movie/popular?api_key=ca5d667528ca51e527d9e4f7830d97d2&language=en-US"
+    )
+    .then(response => {
+      let movies = response.data.results;
+      console.log(movies.length);
+      let output=`
+      <div id="movieCarousel" class="carousel slide" data-ride="carousel" style="margin:auto;">
+           
+          <div class="carousel-inner">
+          `
+      ;
+      let indices = [];
+      while(indices.length!=10){
+        let randomIndex = Math.floor(Math.random() * movies.length);
+        if(indices.indexOf(randomIndex)==-1){
+          indices.push(randomIndex);
+        }
+      }
+      for(let i=0;i<indices.length;i++){
+        let movie = movies[indices[i]];
+        if(i==0){
+          output += `<div class="carousel-item active">`;
+        }
+        else{
+          output += `<div class="carousel-item">`;
+        }
+        output += `
+      <div class="col-sm-6 portfolio-item" style="margin:auto;">
+        ${
+          !movie.poster_path
+            ? `
+      <a class="portfolio-link" data-toggle="modal" href="#" onclick="movieSelected('${
+        movie.id
+      }')">
+         <img class="img-fluid" src="img/no-poster.gif" alt="${movie.title}">
+       </a>
 
+        `
+            : `
+        <a class="portfolio-link" data-toggle="modal" href="#" onclick="movieSelected('${
+          movie.id
+        }')">
+            <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/${
+              movie.poster_path
+            }" alt="${movie.title}">
+          </a>
+          `
+        }
+        <div class="portfolio-caption">
+          <h4 style="color:black">${movie.title}</h4>
+          <p class="text-muted">Released On<br/>${movie.release_date}</p>
+        <a onclick="movieSelected('${
+          movie.id
+        }')" class="btn btn-primary" href="#">Movie Details</a>
+
+        </div>
+      </div>
+        </div>
+      `;
+      }
+      output += ` </div>
+      <a class="carousel-control-prev" href="#movieCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#movieCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+      `
+      $("#movies").html(output);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
 function getMovies(searchText) {
   axios
     .get(
