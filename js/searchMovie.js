@@ -1,5 +1,10 @@
 let adultFlag = false;
 $(document).ready(() => {
+
+  if ($('#searchText')[0] && $('#searchText').val().length) {
+    getMovies($('#searchText').val());
+  }
+
   $("#searchForm").on("submit", e => {
     let searchText = $("#searchText").val();
     //adultFlag = $('#adult').value();
@@ -19,7 +24,6 @@ function getMovies(searchText) {
     )
     .then(response => {
       let movies = response.data.results;
-
       let output = "";
       if (movies.length > 0) {
         $.each(movies, (index, movie) => {
