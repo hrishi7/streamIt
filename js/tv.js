@@ -5,9 +5,18 @@ let searchTitle ='';
 
 function movieSelected(id){
   sessionStorage.setItem('movieId', id);
-  window.location = 'singleTv.html';
+  window.location.href = 'singleTv.html';
+  // window.location.href = `/search-results?query=${encodeURIComponent(query)}`;
+
   return false;
 }
+
+function scrollToResult(result) {
+  if (result) {
+      result.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
 
 
 
@@ -88,10 +97,11 @@ function getMovie(){
         </div>
       </div>
       <br>
-
-
-
     `;
+    if (output) {
+      // Scroll to the search result
+      scrollToResult(output);
+  } 
     $('#movie').html(output);
   })
   .catch((err) =>{

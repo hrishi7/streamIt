@@ -10,6 +10,13 @@ $(document).ready(() => {
   });
 });
 
+function scrollToResult(result) {
+  if (result) {
+      result.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+
 
 function getMovies(searchText){
   axios.get('https://api.themoviedb.org/3/search/tv?api_key=ca5d667528ca51e527d9e4f7830d97d2&language=en-US&query='+searchText+'&page=1')
@@ -17,6 +24,10 @@ function getMovies(searchText){
     let movies = response.data.results;
     console.log(response);
     let output ='';
+    if (output) {
+      // Scroll to the search result
+      scrollToResult(output);
+  } 
     if(movies.length>0){
     $.each(movies, (index, movie) =>{
       output += `
@@ -43,6 +54,10 @@ function getMovies(searchText){
       </div>
 
       `;
+      if (output) {
+        // Scroll to the search result
+        scrollToResult(output);
+    } 
     });
     $('#movies').html(output);
   }

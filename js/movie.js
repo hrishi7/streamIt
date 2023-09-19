@@ -1,8 +1,17 @@
 const notAvailable = "N/A";
 
+function scrollToResult(result) {
+  if (result) {
+      result.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
 function movieSelected(id) {
   sessionStorage.setItem("movieId", id);
-  window.location = "singleMovie.html";
+  window.location.href = "singleMovie.html";
+
+  //window.location.href = `/search-results?query=${encodeURIComponent(query)}`;
+
   return false;
 }
 
@@ -18,9 +27,10 @@ function getMovie() {
     .then(response => {
       console.log(response);
       let movie = response.data;
+      
       let output = `
       <div class="row">
-
+  
         ${
           !movie.poster_path
             ? `
@@ -125,10 +135,12 @@ function getMovie() {
           movie.imdb_id
         }" style=" width: 100%; height: 100%" allowfullscreen="true" scrolling="no" class="embed-responsive-item" ></iframe>
         </div>
-      </div>
-
-
-    `;
+      </div> `;
+      
+    if (output) {
+      // Scroll to the search result
+      scrollToResult(output);
+  } 
       $("#movie").html(output);
     })
     .catch(err => {

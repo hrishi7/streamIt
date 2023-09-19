@@ -217,16 +217,40 @@ img::-moz-selection {
   font-weight: 400;
   padding: 0.75em 0;
   letter-spacing: 1px;
-  color: white;
+  
+  color: #fed136;
   transition: 0.6s ease;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+#mainNav .navbar-nav .nav-item .nav-link::after { 
+  content: '';
+  position: absolute;
+  font-weight:400;
+  left: 50%;
+  right: 50%;
+  bottom: 0px;
+  width: 0px;
+  height: 4px;
+  background: #1b60a5;
+  transition: all 0.45s;
+} 
+
+#mainNav .navbar-nav .nav-item .nav-link:hover::after {
+width: 100%;
+left:0;
+
+}
+
+
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #fed136;
+  color: rgb(38, 121, 216);
+  text-transform: unset;
 }
+
+
 
 @media (min-width: 992px) {
   #mainNav {
