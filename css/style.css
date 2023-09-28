@@ -189,6 +189,7 @@ img::-moz-selection {
     margin-bottom: 5px;
   }
 }
+
 #mainNav .navbar-toggler {
   font-size: 12px;
   right: 0;
@@ -237,6 +238,7 @@ img::-moz-selection {
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
     background-color: transparent;
+    background-color: #323033;
   }
   #mainNav .navbar-brand {
     font-size: 1.75em;
