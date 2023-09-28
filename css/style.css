@@ -6,6 +6,7 @@ body {
   margin: 0px;
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #323033;
 }
 
 #gtp {
@@ -189,7 +190,6 @@ img::-moz-selection {
     margin-bottom: 5px;
   }
 }
-
 #mainNav .navbar-toggler {
   font-size: 12px;
   right: 0;
@@ -238,7 +238,6 @@ img::-moz-selection {
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
     background-color: transparent;
-    background-color: #323033;
   }
   #mainNav .navbar-brand {
     font-size: 1.75em;
@@ -320,9 +319,18 @@ header.masthead .intro-text .intro-heading {
   text-transform: none;
 }
 
+.bg-light {
+  background: transparent;
+  backdrop-filter: blur(50%);
+}
+
 #portfolio .portfolio-item {
   right: 0;
   margin: 0 0 15px;
+}
+
+#portfolio {
+  background: transparent;
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -386,6 +394,8 @@ header.masthead .intro-text .intro-heading {
   h4 {
   margin: 0;
 }
+
+
 
 #portfolio .portfolio-item .portfolio-caption {
   max-width: 400px;
@@ -785,6 +795,10 @@ footer ul.quicklinks {
   margin-bottom: 0;
   text-transform: none;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.copyright {
+  color:#ced4da;
 }
 
 ul.social-buttons {
