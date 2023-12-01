@@ -9,8 +9,6 @@ function movieSelected(id){
   return false;
 }
 
-
-
 function getMovie(){
   let movieId = sessionStorage.getItem('movieId');
 
