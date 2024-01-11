@@ -142,16 +142,30 @@ section h3.section-subheading {
   padding: 20px 40px;
 }
 
+.search-button {
+  font-size: 15px;
+  padding: 10px 20px;
+}
+
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #fec503 !important;
+  border-color: #fec503 !important;
+  color: white;
+}
+
+
+
 .btn-primary {
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #133bb7 ;
+  border-color: #133bb7;
 }
 
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:hover {
-  background-color: #fec810 !important;
-  border-color: #fec810 !important;
+  background-color:  #9b650d !important;
+  border-color: #9b650d !important;
   color: white;
 }
 
