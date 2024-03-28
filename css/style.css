@@ -27,7 +27,16 @@ body {
 }
 
 #about-page-body {
-  background-color: #d7dfed !important;
+  text-align: center;
+  color: white;
+  background-image: url('../img/about/vector_bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 50% 50%; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 p {
   line-height: 1.75;
