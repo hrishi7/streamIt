@@ -39,7 +39,6 @@ function scrollFunction() {
     document.getElementById("mainNav").style.backgroundColor = "transparent";
   }
 }
-$('#home-movies').html(output);
 
 //function to display navbar background-color on scroll
 $(window).scroll(function () {
@@ -60,7 +59,5 @@ $('#gtp').click(function () {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 })
-  .catch((err) => {
-    console.log(err);
-  });
+
 
