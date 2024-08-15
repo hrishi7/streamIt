@@ -115,7 +115,7 @@ function getMovie() {
             <a href ="https://imdb.com/title/${
               movie.imdb_id
             }" target ="_blank" class="btn btn-primary">View Imdb</a>
-            <a href="movies.html" clas="btn btn-default">Go back to search</a>
+            <a href="movies.html" clas="btn btn-default" >Go back to search </a>
         </div>
       </div>
       <br>
