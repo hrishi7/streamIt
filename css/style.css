@@ -137,6 +137,10 @@ section h3.section-subheading {
   font-weight: 700;
 }
 
+.border-orange{
+  border: 1px solid orange;
+}
+
 .btn-xl {
   font-size: 18px;
   padding: 20px 40px;
