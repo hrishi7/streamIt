@@ -877,3 +877,7 @@ ul.social-buttons li a:hover {
 #hide-button {
   margin-top: 40px;
 }
+.text-danger {
+  color: red;
+  font-size: 14px;
+}

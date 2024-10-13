@@ -89,7 +89,7 @@
                   </div>
                   <div class="form-group">
                     <input type="email" id="email" class="form-control" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
-                    <p class="help-block text-danger"></p>
+                    <p class="help-block text-danger" id="emailError"></p>
                   </div>
                   <div class="form-group">
                     <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number.">
@@ -190,8 +190,34 @@
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
-
-
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent form submission for validation
+      
+      const emailInput = document.getElementById('email');
+      const emailError = document.getElementById('emailError');
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+      let isValid = true;
+    
+      // Validate Email
+      if (!emailInput.value) {
+        emailError.textContent = "Email is required.";
+        isValid = false;
+      } else if (!emailPattern.test(emailInput.value)) {
+        emailError.textContent = "Please enter a valid email address.";
+        isValid = false;
+      } else {
+        emailError.textContent = ""; // Clear the error message if valid
+      }
+    
+      // If the form is valid, submit it
+      if (isValid) {
+        document.getElementById('contactForm').submit();
+      }
+    });
+    
+    </script>
 
   </body>
 
