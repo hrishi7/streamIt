@@ -8,14 +8,13 @@ $(document).ready(() => {
     e.preventDefault();
   });
 });
-
 function getMovies(searchText) {
   axios
     .get(
       "https://api.themoviedb.org/3/search/movie?api_key=ca5d667528ca51e527d9e4f7830d97d2&language=en-US&query=" +
-        searchText +
-        "&page=1&include_adult=" +
-        adultFlag
+      searchText +
+      "&page=1&include_adult=" +
+      adultFlag
     )
     .then(response => {
       let movies = response.data.results;
@@ -25,32 +24,27 @@ function getMovies(searchText) {
         $.each(movies, (index, movie) => {
           output += `
       <div class="col-md-4 col-sm-6 portfolio-item">
-        ${
-          !movie.poster_path
-            ? `
-      <a class="portfolio-link" data-toggle="modal" href="#" onclick="movieSelected('${
-        movie.id
-      }')">
+        ${!movie.poster_path
+              ? `
+      <a class="portfolio-link" data-toggle="modal" href="#" onclick="movieSelected('${movie.id
+              }')">
          <img class="img-fluid" src="img/no-poster.gif" alt="${movie.title}">
        </a>
 
         `
-            : `
-        <a class="portfolio-link" data-toggle="modal" href="#" onclick="movieSelected('${
-          movie.id
-        }')">
-            <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/${
-              movie.poster_path
-            }" alt="${movie.title}">
+              : `
+        <a class="portfolio-link" data-toggle="modal" href="#" onclick="movieSelected('${movie.id
+              }')">
+            <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/${movie.poster_path
+              }" alt="${movie.title}">
           </a>
           `
-        }
+            }
         <div class="portfolio-caption">
           <h4 style="color:black">${movie.title}</h4>
           <p class="text-muted">Released On<br/>${movie.release_date}</p>
-        <a onclick="movieSelected('${
-          movie.id
-        }')" class="btn btn-primary" href="#">Movie Details</a>
+        <a onclick="movieSelected('${movie.id
+            }')" class="btn btn-primary" href="#">Movie Details</a>
 
         </div>
       </div>
